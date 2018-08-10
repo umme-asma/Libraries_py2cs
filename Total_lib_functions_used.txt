@@ -1,0 +1,114 @@
+1.pickle :(done , use serialize c#library)(pickleshare.py in site-packages folder & pickle.py in Lib folder)
+1.pickle.dump	2.pickle.load(f)
+
+2.shapely :(has geos_c.dll)
+1.translate()	from shapely.affinity import translate	(affinity.py in shapely folder)
+2.if speedups.available: speedups.enable()	shapely import speedups,	(_speedups.py)
+3.rotate(bx, angle, origin=bx.centroid)		shapely.affinity import rotate		(affinity.py in shapely folder)	
+4.Shapely : shapely.geometry import Point, LinearRing, LineString, box,  (geometry folder in shapely)
+5.from shapely.geometry import Polygon, MultiPolygon (geometry folder)	Polygon(exCtr, inCtr)	
+6.poly.is_valid:	polygon.py
+8.poly.interiors	polygon.py
+9.exCtr = tPolyC[tP[0]].exterior.coords[:]	polygon.py
+
+
+3.networkX :
+1.graf = nx.Graph(); 		(defined as class Graph in graph.py)
+2.graf.add_edges_from(conts[::-1])	(graph.py under networkx classes folder)
+3.nx.single_source_shortest_path(graf, 0).values()	(unweighted.py line 204			C:\Users\INTECH\AppData\Local\Enthought\Canopy\edm\envs\User\Lib\site-packages\networkx\algorithms\shortest_paths
+4.paths = [tuple(r[1]) for r in tmpPath]
+networkx in c++ (boost graph)
+
+4.matplotlib :
+1.plt.figure(frameon=False), 	(pyplot.py)
+2.fig.set_size_inches(w,h),  	(figure.py)
+3.ax.axis(extent),  		(_base.py)
+4.plt.plot(outPts[:,0], 	(pyplot.py)
+5.plt.savefig, 		(pyplot.py)
+6.plt.close(fig)	(pyplot.py)
+7.from matplotlib.collections import LineCollection	3.LineCollection(path, colors='#00FF00', linewidths=0.25)(collections.py)
+8.plt.gca().add_collection(lns)	(pyplot.py, _base.py in axes folder)
+9.plt.axes([0,0,1,1],	(pyplot.py)
+https://matplotlib.org/api/axes_api.html
+https://matplotlib.org/api/axes_api.html
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html
+
+5.numpy :
+1.np.array			2.np.ceil()			3.np.floor()	
+4.np.arange()			5.np.around()			6.np.diff(poly.bounds[::2])[0];	  
+7.np.sort(np.concatenate(htch))					8.np.hstack((pth[::2], pth[1::2]))])
+https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.array.html
+
+6.Trimesh : 
+1.trimesh.load_mesh	(load.py in io folder)
+2.centroid	(base.py)	?
+3.bounds	(bounds.py)	
+4.apply_translation	(base.py)	
+5.partMesh.section(plane_origin=[0,0,z], plane_normal=[0,0,1])
+6.sum([p.area for p in crLyr])	
+7.[p.buffer(plTol)	
+8.crPoly.distance(p)		
+9.crPoly.difference()		
+10.dif.type	
+11.list(dif.geoms)	
+12.dnSkn.copy()	
+10.repr(p.type)
+12.slice2D, xForm = xion.to_planar()	
+13.slicePoly = slice2D.polygons_closed	
+14.suppMesh.is_watertight	
+15.suppMesh.is_winding_consistent
+16. pXion = rmXer(partMesh)		from trimesh.ray.ray_triangle import RayMeshIntersector as rmXer
+17.pPoly[lNum] = job.result()[1]		
+18.getPolyCoords(poly)	
+19.poly.intersection(htchLineS)
+20.htchXion.coords[:]		
+21.htchXion.geoms	
+22...htchLines.reverse()	
+https://github.com/mikedh/trimesh/blob/master/trimesh/base.py has most of above functions
+https://programtalk.com/vs2/?source=python/8446/trimesh/examples/section.py#
+https://github.com/mikedh/trimesh/tree/master/trimesh
+https://www.youtube.com/watch?v=R_kV3YiJqEw
+trimesh2 is trimesh in c++
+c# mesh library
+https://stackoverflow.com/questions/11315010/what-do-and-before-a-variable-name-mean-in-a-function-signature
+
+
+
+7.pythn functs :
+1.while not isinstance(lSpot, float):	
+2.dtype=np.uint32	
+3.inpData.append	
+4.len(inpData)	
+5.with futures.ProcessPoolExecutor() as exc:
+6.exc.submit	
+7.iter(inpData)			
+8.try,except	
+9. m, s = divmod(pTime, 60)	
+10.s = int(round(s))
+11.os.cpu_count():	
+12.for i, p in enumerate(crLyr):	
+13.for t in range(tS, tE):	
+14.here1 = time.time()
+15.tPoly.sort(key=lambda x:x[0],    
+16.reverse=True)		
+17.tPoly.index(p[0])
+18.combinations(tPoly, 2)	
+19.p[0].contains(p[1])		
+20.contsS = set()	
+21.contsS.add(e[1])
+22.min(), max()	
+23.contsS.add(e[1])	
+24.conts.remove(e)
+25.polys.index(p[0])	
+26..p[0].contains(p[1])	
+27.abs(flPrtA - cmPrtA)
+13.os.mkdir('Project/{:s}/Slices'.format(proj),True)
+
+
+8.itertools
+from itertools import combinations
+
+9.concurrent
+for job in futures.as_completed(jobs):
+
+10.rtree?? wheel ??
