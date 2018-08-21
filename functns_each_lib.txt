@@ -1,0 +1,202 @@
+1.pickle :(done , use serialize c#library)(pickleshare.py in site-packages folder & pickle.py in Lib folder)
+1.pickle.dump	2.pickle.load(f)
+
+2.shapely :(has geos_c.dll)
+1.translate()	from shapely.affinity import translate	(affinity.py in shapely folder)
+2.if speedups.available: speedups.enable()	shapely import speedups,	(_speedups.py)
+3.rotate(bx, angle, origin=bx.centroid)		shapely.affinity import rotate		(affinity.py in shapely folder)	
+4.Shapely : shapely.geometry import Point, LinearRing, LineString, box,  (geometry folder in shapely,geo.py for box)
+5.from shapely.geometry import Polygon, MultiPolygon (geometry folder)	Polygon(exCtr, inCtr)	
+6.poly.is_valid:	polygon.py
+8.poly.interiors	polygon.py
+9.exCtr = tPolyC[tP[0]].exterior.coords[:]	polygon.py
+
+
+3.networkX :
+1.graf = nx.Graph(); 		(defined as class Graph in graph.py in classes folder)
+2.graf.add_edges_from(conts[::-1])	(graph.py under networkx classes folder)
+3.nx.single_source_shortest_path(graf, 0).values()	(unweighted.py line 204	C:\Users\INTECH\AppData\Local\Enthought\Canopy\edm\envs\User\Lib\site-packages\networkx\algorithms\shortest_paths
+4.paths = [tuple(r[1]) for r in tmpPath]
+networkx in c++ (boost graph)
+
+4.matplotlib :
+1.plt.figure(frameon=False), 	(pyplot.py)
+2.fig.set_size_inches(w,h),  	(figure.py)
+3.ax.axis(extent),  		(_base.py in axes folder)
+4.plt.plot(outPts[:,0], 	(pyplot.py)
+5.plt.savefig, 		(pyplot.py)
+6.plt.close(fig)	(pyplot.py)
+7.from matplotlib.collections import LineCollection	3.LineCollection(path, colors='#00FF00', linewidths=0.25)(collections.py)
+8.plt.gca().add_collection(lns)	(pyplot.py, _base.py in axes folder)
+9.plt.axes([0,0,1,1],	(pyplot.py)
+https://matplotlib.org/api/axes_api.html
+https://matplotlib.org/api/axes_api.html
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.figure.html
+
+5.numpy :
+1.np.array			2.np.ceil()			3.np.floor()	
+4.np.arange()			5.np.around()			6.np.diff(poly.bounds[::2])[0];	  
+7.np.sort(np.concatenate(htch))					8.np.hstack((pth[::2], pth[1::2]))])
+https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.array.html
+
+6.Trimesh : 
+1.trimesh.load_mesh	(load.py in io folder)
+2.centroid	(base.py)	?
+3.bounds	(base.py)	
+4.apply_translation	(base.py)	
+5.partMesh.section(plane_origin=[0,0,z], plane_normal=[0,0,1])	(base.py)
+6.sum([p.area for p in crLyr])	
+7.[p.buffer(plTol)	(primitives.py)
+8.crPoly.distance(p)
+9.repr(p.type)		
+10.dif.type	
+11.list(dif.geoms)	
+12.slice2D, xForm = xion.to_planar()	(path.py in path folder)
+13.slicePoly = slice2D.polygons_closed	(path.py in path folder)
+14.suppMesh.is_watertight	(base.py)
+15.suppMesh.is_winding_consistent	(base.py)
+16. pXion = rmXer(partMesh)		from trimesh.ray.ray_triangle import RayMeshIntersector as rmXer
+17.pPoly[lNum] = job.result()[1]		
+18.getPolyCoords(poly)	
+19.poly.intersection(htchLineS)		base.py
+20.htchXion.coords[:]		
+21.htchXion.geoms	
+	
+https://github.com/mikedh/trimesh/blob/master/trimesh/base.py has most of above functions
+https://programtalk.com/vs2/?source=python/8446/trimesh/examples/section.py#
+https://github.com/mikedh/trimesh/tree/master/trimesh
+https://www.youtube.com/watch?v=R_kV3YiJqEw
+trimesh2 is trimesh in c++
+c# mesh library
+https://www.youtube.com/watch?v=642o94MNfs4	reading binary file
+https://stackoverflow.com/questions/11315010/what-do-and-before-a-variable-name-mean-in-a-function-signature
+https://www.youtube.com/watch?v=jPj1GlD6mDk
+
+
+
+7.pythn functs :
+1.while not isinstance(lSpot, float):	
+2.dtype=np.uint32	
+3.inpData.append	
+4.len(inpData)	
+5.with futures.ProcessPoolExecutor() as exc:
+6.exc.submit	
+7.iter(inpData)			
+8.try,except	
+9. m, s = divmod(pTime, 60)	
+10.s = int(round(s))
+11.os.cpu_count():	
+12.for i, p in enumerate(crLyr):	
+13.for t in range(tS, tE):	
+14.here1 = time.time()
+15.tPoly.sort(key=lambda x:x[0],    
+16.reverse=True)		
+17.tPoly.index(p[0])
+18.combinations(tPoly, 2)	
+19.p[0].contains(p[1])		
+20.contsS = set()	
+21.contsS.add(e[1])
+22.min(), max()	
+23.contsS.add(e[1])	
+24.conts.remove(e)
+25.polys.index(p[0])	
+26..p[0].contains(p[1])	
+27.abs(flPrtA - cmPrtA)
+13.os.mkdir('Project/{:s}/Slices'.format(proj),True)
+9.crPoly.difference()
+22...htchLines.reverse()
+12.dnSkn.copy()
+
+
+8.itertools
+from itertools import combinations
+
+9.concurrent
+for job in futures.as_completed(jobs):
+
+10.rtree?? wheel ??
+
+
+1.def load_mesh(file_obj, file_type=None, **kwargs):	(it Loads a mesh file into a Trimesh object)		calls
+	1._parse_file_args(file_obj, file_type)
+	2.util.is_file(file_obj)
+	3.file_obj.close()(python functn)
+	4.log.debug(python functn:logger.debug or log.debug)(in constants.py log = _getLogger('trimesh'))
+	5.mesh_loaders[file_type](file_obj,file_type=file_type)	(its an empty dictionary assigned & then further loaders added)
+	6.load_kwargs(kwargs)
+	7.kwargs.update(result)
+	8.loaded = []
+	  loaded.append(load_kwargs(kwargs))
+	9.loaded[-1].metadata.update(metadata)
+  1._parse_file_args(file_obj, file_type) calls ( Given a file_obj and a file_type, try to turn them into a file-like object)
+    1.metadata.update(kwargs['metadata'])
+    2.util.is_file(file_obj)
+    3.util.is_string(file_obj)
+    4.os.path.expanduser(file_obj)
+    5.os.path.abspath(file_path)
+    6.os.path.isfile(file_path)
+    7.os.path.basename(file_obj)
+    8.util.split_extension(file_path,special=['tar.gz', 'tar.bz2'])
+    9.file_type.lower()
+    10.mesh_loaders.update(_stl_loaders)
+  2.is_file(obj):	calls hasattr(obj, 'read') or hasattr(obj, 'write') (in util.py)
+    https://www.programiz.com/python-programming/methods/built-in/hasattr
+  6.load_kwargs(kwargs)(in load.py) , (Load geometry from a properly formatted dict or kwargs)
+    1.def handle_scene()	scene.py
+	scene.geometry.update({k: load_kwargs(v) for
+                               k, v in kwargs['geometry'].items()})
+	self.geometry = collections.OrderedDict()
+	there is collections folder in Lib under python libraries.
+    2.def handle_trimesh_kwargs()
+    3.def handle_trimesh_export():
+
+
+
+2.pMesh.centroid
+  1.np.average(self.triangles_center,axis=0,weights=self.area_faces)
+  2.centroid.flags.writeable = False
+  
+
+3.def bounds(self):
+  1.self.triangles.reshape((-1, 3))
+    1.def triangles(self):
+    	triangles = self.vertices.view(np.ndarray)[self.faces]
+	reshape(row,col) is python function. if -1 it means it doesnt know number of rows.
+  2.in_mesh = self.triangles.reshape((-1, 3))
+	np.vstack((in_mesh.min(axis=0),in_mesh.max(axis=0)))
+
+
+4.def apply_translation(self, translation):
+  1.np.asanyarray(translation, dtype=np.float64)	(Convert a list into an array)
+  2.translation.shape != (3,):
+  3.np.eye(4)	(Return a 2-D array with ones on the diagonal and zeros elsewhere.)
+  
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Debug : These are used to give Detailed information, typically of interest only when diagnosing problems.
+Info : These are used to Confirm that things are working as expected
+Warning : These are used an indication that something unexpected happened, or indicative of some problem in the near future
+Error : This tells that due to a more serious problem, the software has not been able to perform some function
+Critical : This tells serious error, indicating that the program itself may be unable to continue running
+
+
+triangles.reshape((-1, 3))
+numpy allow us to give one of new shape parameter as -1 (eg: (2,-1) or (-1,3) but not (-1, -1)). It simply means that it is an 
+unknown dimension and we want numpy to figure it out. And numpy will figure this by looking at the 'length of the array and 
+remaining dimensions' and making sure it satisfies the above mentioned criteria
+https://stackoverflow.com/questions/18691084/what-does-1-mean-in-numpy-reshape
+
